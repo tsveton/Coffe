@@ -1,0 +1,122 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.container{
+    max-width: 1660px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin: auto;
+}
+
+.news{
+    margin-top: 40px;
+   margin-bottom: 100px; 
+
+    &__title{
+        font-size: 56px;
+        font-weight: bold;    
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 60px;
+    }
+
+    &__more{
+        color: black;
+        font-size: 25px;
+        font-size: 25px;
+        transition: all 0.3s ease;
+
+        &:hover{
+            color: #F9B300;
+        }
+    }
+
+    &__card{
+        display: flex;
+        align-items: center;
+        box-shadow: 0 0 30px rgba(92, 92, 92, .2);
+        border-radius: 20px;        
+        transition: all 0.3s ease;
+        background-color: #fff;
+
+        &:hover{
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+
+        &_1{
+            grid-column: 1/4;
+        }
+
+        &_2{
+            grid-column: 4/6;
+        }
+
+        &_3{
+            grid-column: 1/3;
+        }
+
+        &_4{
+            grid-column: 3/6;
+        }
+
+        &-text{
+            max-width: 459px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin: 0 auto;
+        }
+
+        &-title{
+            font-weight: bold;
+        }
+
+        &-link{
+            text-decoration: none;
+            color: #F9B300;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+
+            &:hover{
+                color:#ffe49f ;
+            }
+
+            &:hover::after{
+                transform: translateX(10px);
+            }
+
+            &::after{
+                content: '';
+                display: block;
+                background-image: url(../png/Arrow.svg);
+                background-position: center;
+                background-repeat: no-repeat;
+                width: 13px;
+                height: 20px;
+                transition: all 0.3s ease;
+            }
+        }
+    }
+
+    &__grid{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 20px;
+    }
+    
+}
